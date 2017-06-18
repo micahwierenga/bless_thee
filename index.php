@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <style type="text/css">
     	body {
-    		background-color: rgba(143, 143, 121, 1);
+    		/*background-color: rgba(143, 143, 121, 1);*/
     		background-color: #333;
-    		color: #000;
+    		/*color: #000;*/
     		color: #fff;
     	}
     	h3 {
