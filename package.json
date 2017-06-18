@@ -1,0 +1,13 @@
+{
+  "name": "bless_thee",
+  "version": "1.0.0",
+  "description": "A scoreboard for tracking blessings",
+  "main": "database.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Micah Wierenga",
+  "license": "ISC",
+  "dependencies": {
+  }
+}
