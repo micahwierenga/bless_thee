@@ -14,7 +14,7 @@
     	h3 {
     		text-align: center;
     		font-size: 60px;
-    		margin-bottom: 30px;
+    		margin-bottom: 24px;
     	}
     	table {
     		text-align: center;
@@ -26,14 +26,16 @@
     	}
     	.player {
     		font-size: 60px;
-    		padding: 200px;
     	}
     	.btn {
     		margin-right: 10px;
+    		margin-top: 20px;
+    		font-size: 24px;
     	}
     	.emotional_status {
     		width: 50px;
     		height: 50px;
+    		margin-top: 15px;
     	}
     	.copyright {
     		text-align: center;
@@ -67,7 +69,7 @@
 			url: "blessed.php",
 			cache: false,
 			success: function(response) {
-				alert(name + " has disseminated a blessing");
+				// alert(name + " has disseminated a blessing");
 			}
 		});
 	}
@@ -80,10 +82,14 @@
 			url: "cursed.php",
 			cache: false,
 			success: function(response) {
-				alert(name + " has brought shame upon his or her head");
+				// alert(name + " has brought shame upon his or her head");
 			}
 		});
 	}
+
+	// setTimeout(function() {
+	// 	window.location.reload(1);
+	// }, 1000);
 	</script>
 </head>
  
@@ -105,7 +111,7 @@
 						<th class="scoreboard">Player</th>
 						<th class="scoreboard">Score</th>
 						<th class="scoreboard">Emotional Status</th>
-						<th class="scoreboard">Blessings and Cursings</th>
+						<th class="scoreboard"></th>
 					</tr>
 				</thead>
 				<tbody>
