@@ -22,7 +22,7 @@
     	}
     	.scoreboard {
     		text-align: center;
-    		font-size: 36px;
+    		font-size: 24px;
     	}
     	.player {
     		font-size: 60px;

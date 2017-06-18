@@ -9,5 +9,6 @@
   "author": "Micah Wierenga",
   "license": "ISC",
   "dependencies": {
+    "pg": "^6.1.2"
   }
 }
