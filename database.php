@@ -35,7 +35,7 @@
 //     }
 // }
 
-$dbconn = pg_connect("host=local port=5432 dbname=bless_thee user=micahwierenga password=1234")
+$dbconn = pg_connect(DATABASE_URL || "host=local port=5432 dbname=bless_thee user=micahwierenga password=1234")
 if($dbconn) {
   echo "Error: Unable to open database\n";
 } else {
