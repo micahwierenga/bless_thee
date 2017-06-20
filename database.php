@@ -1,37 +1,45 @@
 <?php
-class Database
-{
-    private static $dbName = 'bless_thee' ;
-    private static $dbHost = 'localhost' ;
-    private static $dbUsername = 'root';
-    private static $dbUserPassword = 'root';
+// class Database
+// {
+//     private static $dbName = 'bless_thee' ;
+//     private static $dbHost = 'localhost' ;
+//     private static $dbUsername = 'root';
+//     private static $dbUserPassword = 'root';
      
-    private static $cont  = null;
+//     private static $cont  = null;
      
-    public function __construct() {
-        die('Init function is not allowed');
-    }
+//     public function __construct() {
+//         die('Init function is not allowed');
+//     }
      
-    public static function connect()
-    {
-       // One connection through whole application
-       if ( null == self::$cont )
-       {     
-        try
-        {
-          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); 
-        }
-        catch(PDOException $e)
-        {
-          die($e->getMessage()); 
-        }
-       }
-       return self::$cont;
-    }
+//     public static function connect()
+//     {
+//        // One connection through whole application
+//        if ( null == self::$cont )
+//        {     
+//         try
+//         {
+//           self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); 
+//         }
+//         catch(PDOException $e)
+//         {
+//           die($e->getMessage()); 
+//         }
+//        }
+//        return self::$cont;
+//     }
      
-    public static function disconnect()
-    {
-        self::$cont = null;
-    }
+//     public static function disconnect()
+//     {
+//         self::$cont = null;
+//     }
+// }
+
+$dbconn = pg_connect("host=local port=5432 dbname=bless_thee user=micahwierenga password=1234")
+if($dbconn) {
+  echo "Error: Unable to open database\n";
+} else {
+  echo "OPened database successfully\n";
 }
+
 ?>
