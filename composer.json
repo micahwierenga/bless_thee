@@ -1,6 +1,5 @@
 {
     "require": {
-        "twig/twig": "1.13.*",
-        "alrik11es/cowsayphp": "^1.2"
+        "ext-mysql": "*"
     }
 }

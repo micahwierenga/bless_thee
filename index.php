@@ -117,22 +117,20 @@
 				<tbody>
 					<?php
 					include 'database.php';
-
+					$pdo = Database::connect();
 					$sql = 'SELECT 
 								id,
 								FIND_IN_SET( score, (
 								SELECT GROUP_CONCAT( score
 								ORDER BY score DESC )
-								FROM players )
+								FROM player )
 								) AS rank,
 								name,
 								score,
 								emotional_status
 							FROM player
 							ORDER BY rank;';
-					var_dump($sql);
-					$result = pg_query($dbconn, $sql);
-					foreach ($result as $row) {
+					foreach ($pdo->query($sql) as $row) {
 						echo '<tr>';
 							echo '<td class="player">' . $row['rank'] . '</td>';
 							echo '<td class="player">' . $row['name'] . '</td>';
@@ -144,7 +142,7 @@
 									</td>';
 						echo '</tr>';
 					}
-					pg_close($dbconn);
+					Database::disconnect();
 					?>
 				</tbody>
 			</table>
