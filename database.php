@@ -9,15 +9,15 @@ class Database
     $cleardb_db = substr( $cleardb_url["path"], 1 );
 
 
-    // private static $dbName = 'bless_thee' ;
-    // private static $dbHost = 'localhost' ;
-    // private static $dbUsername = 'root';
-    // private static $dbUserPassword = 'root';
+    private static $dbName = 'bless_thee' ;
+    private static $dbHost = 'localhost' ;
+    private static $dbUsername = 'root';
+    private static $dbUserPassword = 'root';
 
-    private static $dbName = $cleardb_db;
-    private static $dbHost = $cleardb_server;
-    private static $dbUsername = $cleardb_username;
-    private static $dbUserPassword = $cleardb_password;
+    // private static $dbName = $cleardb_db;
+    // private static $dbHost = $cleardb_server;
+    // private static $dbUsername = $cleardb_username;
+    // private static $dbUserPassword = $cleardb_password;
      
     private static $cont  = null;
      
